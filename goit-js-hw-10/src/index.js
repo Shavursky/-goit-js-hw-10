@@ -10,9 +10,7 @@ const input = document.querySelector('#search-box');
 const ul = document.querySelector('.country-list');
 const div = document.querySelector('.country-info');
 
-
 input.addEventListener('input', debounce(onSearch, DEBOUNCE_DELAY));
-
 
 function onSearch(e) {
     // e.preventDefault();
@@ -42,11 +40,3 @@ function onSearch(e) {
         })
         .catch(error => Notiflix.Notify.failure("Oops, there is no country with that name"));
 }
-
-
-
-
-
-
-
-
