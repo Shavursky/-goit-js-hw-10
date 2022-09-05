@@ -13,12 +13,12 @@ const div = document.querySelector('.country-info');
 input.addEventListener('input', debounce(onSearch, DEBOUNCE_DELAY));
 
 function onSearch(e) {
-    // e.preventDefault();
     const nameCountries = e.target.value.trim();
+    ul.innerHTML = '';
+    div.innerHTML = '';
     fetchCountries(nameCountries)
         .then((countries) => {
             if (countries.length > 10) {
-                e.preventDefault()
                Notiflix.Notify.info("Too many matches found. Please enter a more specific name.")
             } else if (countries.length > 2 && countries.length <= 10) {
                 const liElement = countries.map(({flags, name}) => {
@@ -26,7 +26,6 @@ function onSearch(e) {
                 }).join('');
                 ul.insertAdjacentHTML('afterbegin', liElement);
             } else {
-                ul.innerHTML = '';
                 const { name, capital, population, languages, flags } = countries[0];
                 const langs = languages.map(lang => { return lang.name }).join(', ');
                 const liElementsmarkup = `<li class="country-list-item"><img src="${flags.svg}" alt="">${name}</li>` 
