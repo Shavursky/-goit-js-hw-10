@@ -2,7 +2,7 @@
   "name": "goit-js-hw-10",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://Shavursky_Yurii.github.io/goit-js-hw-10",
+  "homepage": "https://github.com/Shavursky/goit-js-hw-10",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.https://github.com/Shavursky/goit-js-hw-10/"
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/goitacademy/goit-js-hw-10.git"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "Shavursky Yurii <shavursky@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/goitacademy/goit-js-hw-10/issues"
